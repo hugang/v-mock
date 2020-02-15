@@ -36,7 +36,7 @@ spring:
     driverClassName: org.sqlite.JDBC
     druid:
       # 数据源
-      url: jdbc:sqlite::resource:db/v-mock.sqlite
+      url: jdbc:sqlite:/vmock/db/v-mock.sqlite
       # 初始连接数
       initialSize: 5
       # 最小连接池数量

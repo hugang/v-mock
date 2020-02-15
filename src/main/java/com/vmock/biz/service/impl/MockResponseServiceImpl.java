@@ -40,9 +40,7 @@ public class MockResponseServiceImpl extends ServiceImpl<MockResponseMapper, Moc
                 // 条件查询 -> 是否启用
                 .eq(mockResponse.getMain() != null, MockResponse::getMain, mockResponse.getMain())
                 // 条件查询 -> 简述
-                .like(StrUtil.isNotBlank(mockResponse.getDescription()), MockResponse::getDescription, mockResponse.getDescription())
-                // 条件查询 -> 简述
-                .eq(StrUtil.isNotBlank(mockResponse.getMethod()), MockResponse::getMethod, mockResponse.getMethod()));
+                .like(StrUtil.isNotBlank(mockResponse.getDescription()), MockResponse::getDescription, mockResponse.getDescription()));
     }
 
     /**

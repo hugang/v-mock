@@ -57,10 +57,4 @@ public class MockResponse extends BaseEntity<MockResponse> {
     @Excel(name = "自定义响应头")
     private String customHeader;
 
-    /**
-     * 请求方法
-     */
-    @Excel(name = "请求方法")
-    private String method;
-
 }

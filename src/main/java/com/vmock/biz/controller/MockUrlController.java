@@ -113,8 +113,8 @@ public class MockUrlController extends BaseController {
      */
     @GetMapping("/check")
     @ResponseBody
-    public Boolean checkUrl(String url, Long urlId) {
-        return mockUrlService.isUniqueUrl(url, urlId);
+    public Boolean checkUrl(String url, String method, Long urlId) {
+        return mockUrlService.isUniqueUrl(url, method, urlId);
     }
 
 

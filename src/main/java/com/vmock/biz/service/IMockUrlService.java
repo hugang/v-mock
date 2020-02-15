@@ -81,10 +81,11 @@ public interface IMockUrlService extends IService<MockUrl> {
      * url unique check
      *
      * @param url   url path
+     * @param method request method
      * @param urlId has id, for edit page
      * @return true：唯一url， false 不唯一
      */
-    boolean isUniqueUrl(String url, Long urlId);
+    boolean isUniqueUrl(String url, String method, Long urlId);
 
     /**
      * 根据逻辑创建正则查url
@@ -93,4 +94,6 @@ public interface IMockUrlService extends IService<MockUrl> {
      * @return mockUrl entity
      */
     MockUrl getUrlByRegexp(String requestUrlLogic);
+
+	List<MockUrl> selectMockUrlList(String string);
 }

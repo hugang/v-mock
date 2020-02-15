@@ -21,15 +21,6 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-3 control-label">请求方式：</label>
-                <div class="col-sm-8">
-                    <select name="method" class="form-control m-b" th:with="type=${@dict.getType('http_method')}">
-                        <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}"
-                                th:field="*{method}"></option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group">
                 <label class="col-sm-3 control-label">自定义响应头：</label>
                 <div class="col-sm-8">
                     <button class="btn btn-success btn-circle" type="button" title="增加一个响应头" onclick="CustomHeader.add()"><i

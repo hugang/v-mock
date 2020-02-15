@@ -17,13 +17,6 @@
                             <input type="checkbox" name="main" value="1" title="勾选只看使用中，否则显示全部"/>
                         </li>
                         <li>
-                            请求方式：<select name="method" th:with="type=${@dict.getType('http_method')}">
-                            <option value="">所有</option>
-                            <option th:each="dict : ${type}" th:text="${dict.dictLabel}"
-                                    th:value="${dict.dictValue}"></option>
-                        </select>
-                        </li>
-                        <li>
                             <a class="btn btn-primary btn-rounded btn-sm" onclick="$.table.search()"><i
                                     class="fa fa-search"></i>&nbsp;搜索</a>
                             <a class="btn btn-warning btn-rounded btn-sm" onclick="$.form.reset()"><i
@@ -95,10 +88,6 @@
                 {
                     field : 'statusCode',
                     title : 'HTTP状态码'
-                },
-                {
-                    field : 'method',
-                    title : '请求方式'
                 },
                 {
                     title: '操作',

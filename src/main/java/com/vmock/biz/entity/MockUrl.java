@@ -29,6 +29,12 @@ public class MockUrl extends BaseEntity<MockUrl> {
     private String url;
 
     /**
+     * REQUEST METHOD
+     */
+    @Excel(name = "REQUEST METHOD")
+    private String method;
+    
+    /**
      * url名称
      */
     @Excel(name = "url名称")
